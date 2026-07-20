@@ -1,0 +1,70 @@
+const express = require("express");
+const Razorpay = require("razorpay");
+const crypto = require("crypto");
+const PDFDocument = require("pdfkit");
+const nodemailer = require("nodemailer");
+
+const app = express();
+app.use(express.json());
+
+const razorpay = new Razorpay({
+    key_id: "YOUR_KEY_ID",
+    key_secret: "YOUR_KEY_SECRET"
+});
+
+/* VERIFY PAYMENT */
+app.post("/verify", async (req, res) => {
+
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature, name, email } = req.body;
+
+    const body = razorpay_order_id + "|" + razorpay_payment_id;
+
+    const expectedSignature = crypto
+        .createHmac("sha256", "YOUR_KEY_SECRET")
+        .update(body.toString())
+        .digest("hex");
+
+    if (expectedSignature === razorpay_signature) {
+
+        // CREATE PDF RECEIPT
+        const doc = new PDFDocument();
+        const filePath = `receipt_${razorpay_payment_id}.pdf`;
+
+        doc.pipe(require("fs").createWriteStream(filePath));
+
+        doc.fontSize(20).text("Nanhi Kali Donation Receipt", { align: "center" });
+        doc.moveDown();
+
+        doc.fontSize(12).text(`Donor Name: ${name}`);
+        doc.text(`Email: ${email}`);
+        doc.text(`Payment ID: ${razorpay_payment_id}`);
+        doc.text(`Status: SUCCESS`);
+        doc.text(`Date: ${new Date().toLocaleString()}`);
+
+        doc.end();
+
+        // SEND EMAIL
+        let transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: "your-email@gmail.com",
+                pass: "your-app-password"
+            }
+        });
+
+        await transporter.sendMail({
+            from: "your-email@gmail.com",
+            to: email,
+            subject: "Donation Receipt - Nanhi Kali",
+            text: "Thank you for your donation!",
+            attachments: [{ path: filePath }]
+        });
+
+        res.json({ success: true });
+
+    } else {
+        res.status(400).json({ success: false });
+    }
+});
+
+app.listen(5000, () => console.log("Server running on port 5000"));

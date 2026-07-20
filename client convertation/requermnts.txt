@@ -1,0 +1,25 @@
+**Part 1: Greeting & Introduction**
+Subject: Proposal Acknowledgement - Nanhikali Care Platform
+Dear Team,
+Thank you for trusting us with the Nanhikali Care & Adoption Support India web platform. We are fully aligned with your vision for a high-scalability digital infrastructure and are ready to commence immediately.
+**Part 2: Project Scope**
+Core Modules:
+• UI/UX: Corporate-medical aesthetic (Whites/Soft Blues).
+• Media: HD background video streaming.
+• Booking: Automated scheduling & payment gateway (UPI/Cards).
+• Registry: 25+ child profiles with medical invoices.
+• Directory: 10+ Certified Doctors/Supervisors.
+**Part 3: Regional Hubs Mapping**
+Our regional landing architecture:
+ 1. Guwahati: Adjacent to Apollo Hospitals, Lotus Tower, G.S. Road, Christian Basti.
+ 2. Kolkata: Near Apollo Gleneagles, 58, Canal Circular Rd, Kadapara, Phool Bagan.
+ 3. Barpeta: Near FAAMCH, Jyoti Gaon, Jania Road.
+**Part 4: Commercials & Security**
+We confirm acceptance of the Zero Advance Model and 1-hour fast settlement upon handover.
+Security: Full SSL compliance & robust payment gateway integrations are prioritized for all financial transactions.
+**Part 5: Next Steps**
+To kick-off the development sprint, kindly share:
+ 1. High-res Brand/Hospital logos.
+ 2. HD background profile footage.
+ 3. Doctor profile images & credentials.
+We look forward to a successful collaboration.

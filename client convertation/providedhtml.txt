@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanhi Kali - Care & Support India</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0d3b66, #0077b6);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #e0f2fe;
+            margin-top: 5px;
+        }
+
+        /* Navigation / Info Bar */
+        .contact-bar {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .contact-bar a {
+            color: #ffdd59;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Grid Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #0077b6;
+        }
+
+        .card h2 {
+            color: #0d3b66;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        /* Locations List */
+        .location-item {
+            margin-bottom: 15px;
+        }
+
+        .location-item h3 {
+            font-size: 1.1rem;
+            color: #023e8a;
+        }
+
+        .location-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Forms & Inputs */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        /* Child Profile Preview */
+        .patient-card {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .patient-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .patient-details {
+            padding: 20px;
+        }
+
+        .patient-details h3 {
+            color: #0d3b66;
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0077b6;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Payment Buttons */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn-pay {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+
+        .btn-pay:hover {
+            background-color: #1eb853;
+        }
+
+        .btn-primary {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #023e8a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d3b66;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>NANHI KALI</h1>
+        <p>Care & Child Welfare Support India</p>
+    </header>
+
+    <!-- Helpline Contact Bar -->
+    <div class="contact-bar">
+        Emergency Helpline: 
+        <a href="tel:9217027691">9217027691</a> | 
+        <a href="tel:8638327760">8638327760</a> | 
+        Email: <a href="mailto:support@nanhikali-india.org">support@nanhikali-india.org</a>
+    </div>
+
+    <div class="container">
+        
+        <div class="grid">
+            
+            <!-- Hospital Locations -->
+            <div class="card">
+                <h2>Associated Medical Centers</h2>
+                
+                <div class="location-item">
+                    <h3>1. Apollo Hospital, Guwahati</h3>
+                    <p>GS Road, Christian Basti, Guwahati, Assam - 781005</p>
+                </div>
+                
+                <div class="location-item">
+                    <h3>2. Apollo Gleneagles Hospital, Kolkata</h3>
+                    <p>58, Canal Circular Road, Kadapara, Phool Bagan, Kolkata, West Bengal - 700054</p>
+                </div>
+
+                <div class="location-item">
+                    <h3>3. FAAMCH, Barpeta</h3>
+                    <p>Fakhruddin Ali Ahmed Medical College & Hospital, Jania Road, Jotigaon, Barpeta, Assam - 781301</p>
+                </div>
+            </div>
+
+            <!-- Medical Aid & Support Request Form -->
+            <div class="card">
+                <h2>Medical Assistance Booking</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Child Category / Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Option</option>
+                            <option value="boy">Boy Child Care</option>
+                            <option value="girl">Girl Child Care</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Preferred Hospital Location</label>
+                        <select id="location" required>
+                            <option value="guwahati">Apollo Hospital, Guwahati</option>
+                            <option value="kolkata">Apollo Hospital, Kolkata</option>
+                            <option value="barpeta">FAA Medical College, Barpeta</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Submit Care Booking</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Featured Patient / Medical Care Profile -->
+        <h2 style="color: #0d3b66; margin-bottom: 20px;">Active Patient Medical Support</h2>
+        <div class="grid">
+            
+            <div class="patient-card">
+                <img src="https://via.placeholder.com/400x220?text=Child+Medical+Photo" alt="Child Photo" class="patient-img">
+                <div class="patient-details">
+                    <span class="badge">Medical Bill Support</span>
+                    <h3>Child Patient Case #104</h3>
+                    <p><strong>Age:</strong> 3 Years</p>
+                    <p><strong>Hospital:</strong> Apollo Hospital, Guwahati</p>
+                    <p><strong>Estimated Bill:</strong> ₹45,000</p>
+                </div>
+            </div>
+
+            <!-- Payment Gateway Options Card -->
+            <div class="card">
+                <h2>Support & Payment Gateways</h2>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">
+                    Select your preferred payment method to complete donations or medical bill payments securely:
+                </p>
+
+                <div class="payment-methods">
+                    <button class="btn-pay" style="background-color: #5f259f;">PhonePe</button>
+                    <button class="btn-pay" style="background-color: #4285f4;">Google Pay</button>
+                    <button class="btn-pay" style="background-color: #002e6e;">Paytm</button>
+                    <button class="btn-pay" style="background-color: #2b2b2b;">Credit / Debit Card</button>
+                </div>
+
+                <div style="margin-top: 20px; font-size: 0.85rem; color: #777; text-align: center;">
+                    🔒 All transactions are protected via SSL encryption.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Nanhi Kali Care & Support India. All Rights Reserved.</p>
+        <p>Contact: +91 9217027691 | +91 8638327760</p>
+    </footer>
+
+</body>
+</html>

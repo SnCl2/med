@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nanhikali - Care & Adoption Support India</title>
+  <meta name="description" content="Nanhikali Care & Child Welfare Support India - Digital infrastructure for pediatric care, adoption support, certified doctor directory, and regional medical hubs in Guwahati, Kolkata, and Barpeta.">
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Emergency Bar -->
+  <div class="top-helpline-bar">
+    <div class="container top-bar-content">
+      <div class="helpline-item">
+        <i class="fa-solid fa-phone-volume"></i> Emergency Helplines: 
+        <a href="tel:9217027691">9217027691</a> | 
+        <a href="tel:8638327760">8638327760</a>
+      </div>
+      <div class="helpline-links">
+        <div class="helpline-item">
+          <i class="fa-solid fa-envelope"></i> 
+          <a href="mailto:support@nanhikali-india.org">support@nanhikali-india.org</a>
+        </div>
+        <span class="top-badge"><i class="fa-solid fa-shield-check"></i> Zero Advance Settlement Model</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <div class="brand-text">
+          <h1>NANHIKALI</h1>
+          <span>Care & Adoption Support India</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#hubs" class="nav-link">Medical Hubs</a></li>
+        <li><a href="#children" class="nav-link">Child Registry</a></li>
+        <li><a href="#doctors" class="nav-link">Doctor Directory</a></li>
+        <li><a href="#application-form" class="nav-link">Application Form</a></li>
+        <li><a href="#payment-portal" class="nav-link">Support & Payment</a></li>
+      </ul>
+
+      <a href="#children" class="btn-header-cta">
+        <i class="fa-solid fa-hand-holding-heart"></i> Sponsor Medical Aid
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-grid">
+      <div class="hero-left-content">
+        <div class="hero-tag">
+          <span></span> High-Scalability Digital Care Infrastructure
+        </div>
+        <h1 class="hero-title">
+          Empowering Children with <span class="highlight">Lifesaving Medical Care</span> & Adoption Support
+        </h1>
+        <p class="hero-subtitle">
+          Partnered with premier regional medical centers across Guwahati, Kolkata, and Barpeta. Delivering transparent, fast medical bill aid and child welfare support.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#children" class="btn-hero-primary">
+            <i class="fa-solid fa-child-reaching"></i> Explore 25+ Child Profiles
+          </a>
+          <a href="#application-form" class="btn-hero-secondary">
+            <i class="fa-solid fa-file-signature"></i> Apply for Adoption / Care
+          </a>
+        </div>
+
+        <div class="hero-trust-row">
+          <div class="trust-item"><i class="fa-solid fa-circle-check"></i> 100% SSL Encrypted</div>
+          <div class="trust-item"><i class="fa-solid fa-circle-check"></i> 1-Hour Fast Settlement</div>
+          <div class="trust-item"><i class="fa-solid fa-circle-check"></i> Verified Medical Invoices</div>
+        </div>
+      </div>
+
+      <!-- Hero Card Feature -->
+      <div class="hero-right-card">
+        <div class="hero-card-preview">
+          <span class="preview-badge"><i class="fa-solid fa-star"></i> Featured Urgency Case</span>
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=600&q=80" alt="Child Patient Aarav" class="preview-child-img">
+          <div class="preview-info">
+            <h3>Aarav Sharma (2.5 Yrs)</h3>
+            <p><i class="fa-solid fa-hospital"></i> Apollo Hospital, Guwahati • Pediatric VSD Surgery</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width: 61%;"></div>
+            </div>
+            <div class="progress-labels">
+              <span>Raised: ₹52,000</span>
+              <span>Goal: ₹85,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Impact Statistics Bar -->
+  <section class="container">
+    <div class="impact-stats-bar">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">2,450+</div>
+          <div class="stat-label">Children Supported</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Regional Medical Hubs</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">28+</div>
+          <div class="stat-label">Certified Doctors & Supervisors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Zero Advance Transparency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Hubs Section -->
+  <section id="hubs" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Regional Landing Architecture</span>
+        <h2 class="section-title">Associated Medical Centers & Hubs</h2>
+        <p class="section-desc">Direct medical partnerships established near top super-specialty hospitals to ensure immediate pediatric intervention.</p>
+      </div>
+
+      <div class="hubs-grid" id="hubsContainer">
+        <!-- Dynamically Populated by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Child Profiles Registry Section -->
+  <section id="children" class="section-padding" style="background: #f1f5f9;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Child Welfare Registry</span>
+        <h2 class="section-title">Active Pediatric Medical & Care Cases</h2>
+        <p class="section-desc">Browse real-time child profiles with itemized medical bill invoices and verified hospital records.</p>
+      </div>
+
+      <!-- Filter & Search Controls -->
+      <div class="filter-controls-wrap">
+        <div class="search-input-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="childSearchInput" placeholder="Search by child name, diagnosis, or hospital...">
+        </div>
+
+        <div class="filter-pills" id="genderFilterGroup">
+          <button class="filter-btn active" data-filter="all">All Cases</button>
+          <button class="filter-btn" data-filter="boy">Boys</button>
+          <button class="filter-btn" data-filter="girl">Girls</button>
+          <button class="filter-btn" data-filter="guwahati">Guwahati</button>
+          <button class="filter-btn" data-filter="kolkata">Kolkata</button>
+          <button class="filter-btn" data-filter="barpeta">Barpeta</button>
+        </div>
+      </div>
+
+      <!-- Children Card Grid -->
+      <div class="children-grid" id="childrenGrid">
+        <!-- Dynamically Populated by js/app.js -->
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn-load-more" id="btnLoadMoreChildren">Showing All Active Profiles (25+)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certified Doctors Directory Section -->
+  <section id="doctors" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Supervisory Directory</span>
+        <h2 class="section-title">Certified Doctors & Medical Supervisors</h2>
+        <p class="section-desc">Leading pediatric specialists overseeing medical treatments, adoption clearances, and emergency surgeries.</p>
+      </div>
+
+      <div class="doctors-grid" id="doctorsGrid">
+        <!-- Dynamically Populated by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Adoption & Document Application Form (From anatherthing.txt) -->
+  <section id="application-form" class="section-padding" style="background: #fff5f8;">
+    <div class="container">
+      <div class="form-wrapper-card">
+        <div class="form-banner-header">
+          <h2>Nanhikali Care & Adoption Support India</h2>
+          <p>Official Applicant Registration & Identity Verification Form</p>
+        </div>
+
+        <!-- Wizard Steps Bar -->
+        <div class="wizard-steps-container">
+          <div class="wizard-step-item active" data-step="1">
+            <div class="step-circle">1</div>
+            <div class="step-label">Personal Info</div>
+          </div>
+          <div class="wizard-step-item" data-step="2">
+            <div class="step-circle">2</div>
+            <div class="step-label">Contact & Address</div>
+          </div>
+          <div class="wizard-step-item" data-step="3">
+            <div class="step-circle">3</div>
+            <div class="step-label">Identity Docs</div>
+          </div>
+          <div class="wizard-step-item" data-step="4">
+            <div class="step-circle">4</div>
+            <div class="step-label">Photo Uploads</div>
+          </div>
+        </div>
+
+        <!-- Wizard Form Content -->
+        <form id="adoptionAppForm" class="wizard-content-body" onsubmit="return false;">
+          
+          <!-- STEP 1: Personal Info -->
+          <div class="form-step-pane active" id="stepPane1">
+            <h3 class="pane-heading"><i class="fa-solid fa-user-check"></i> 1. Personal Information (व्यक्तिगत विवरण)</h3>
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label>Applicant Full Name (आवेदक का नाम) <span>*</span></label>
+                <input type="text" id="full_name" class="form-control-input" placeholder="Enter full name" required>
+              </div>
+              <div class="form-group-field">
+                <label>Age in Years (आयु) <span>*</span></label>
+                <input type="number" id="age" class="form-control-input" placeholder="e.g. 32" required>
+              </div>
+              <div class="form-group-field">
+                <label>Father's Name (पिता का नाम) <span>*</span></label>
+                <input type="text" id="father_name" class="form-control-input" placeholder="Enter father's name" required>
+              </div>
+              <div class="form-group-field">
+                <label>Mother's Name (माता का नाम) <span>*</span></label>
+                <input type="text" id="mother_name" class="form-control-input" placeholder="Enter mother's name" required>
+              </div>
+              <div class="form-group-field">
+                <label>Spouse / Husband / Wife Name (पति/पत्नी का नाम)</label>
+                <input type="text" id="spouse_name" class="form-control-input" placeholder="Spouse name if applicable">
+              </div>
+              <div class="form-group-field">
+                <label>Other Relative / Guardian Name (अन्य रिश्तेदार)</label>
+                <input type="text" id="other_name" class="form-control-input" placeholder="Guardian or relative name">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Contact & Address -->
+          <div class="form-step-pane" id="stepPane2">
+            <h3 class="pane-heading"><i class="fa-solid fa-address-card"></i> 2. Contact & Address (संपर्क और पता)</h3>
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label>Mobile Phone Number (मोबाइल नंबर) <span>*</span></label>
+                <input type="tel" id="mobile_number" class="form-control-input" placeholder="10-digit mobile number" required>
+              </div>
+              <div class="form-group-field">
+                <label>Email Address (ईमेल आई डी)</label>
+                <input type="email" id="email_id" class="form-control-input" placeholder="applicant@email.com">
+              </div>
+              <div class="form-group-field full-width">
+                <label>Full Residential Address (पूरा पता) <span>*</span></label>
+                <textarea id="full_address" class="form-control-input" placeholder="House No, Street, Landmark, City, State, Pincode" required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Identity Details -->
+          <div class="form-step-pane" id="stepPane3">
+            <h3 class="pane-heading"><i class="fa-solid fa-id-card"></i> 3. Identity Details (पहचान पत्र)</h3>
+            <div class="form-grid-2">
+              <div class="form-group-field">
+                <label>Aadhaar Card Number (आधार नंबर)</label>
+                <input type="text" id="aadhaar_number" class="form-control-input" placeholder="12 Digit Aadhaar Number">
+              </div>
+              <div class="form-group-field">
+                <label>PAN Card Number (पैन कार्ड नंबर)</label>
+                <input type="text" id="pan_number" class="form-control-input" placeholder="10 Digit PAN Number">
+              </div>
+              <div class="form-group-field">
+                <label>Voter ID Number (वोटर आईडी)</label>
+                <input type="text" id="voter_id" class="form-control-input" placeholder="Voter ID Number">
+              </div>
+              <div class="form-group-field">
+                <label>Driving Licence Number (ड्राइविंग लाइसेंस)</label>
+                <input type="text" id="dl_number" class="form-control-input" placeholder="Driving Licence Number">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Document Uploads -->
+          <div class="form-step-pane" id="stepPane4">
+            <h3 class="pane-heading"><i class="fa-solid fa-cloud-arrow-up"></i> 4. Photo & Document Uploads (दस्तावेज अपलोड)</h3>
+            <div class="form-grid-2">
+              
+              <div class="form-group-field">
+                <label>Husband & Wife Joint Photo (पति-पत्नी की संयुक्त फोटो)</label>
+                <div class="upload-drop-zone">
+                  <i class="fa-solid fa-user-group"></i>
+                  <p>Click or Drag Joint Photo here</p>
+                  <input type="file" id="joint_photo" accept="image/*" onchange="previewUploadedFile(this, 'preview_joint')">
+                </div>
+                <div id="preview_joint" class="file-preview-box"></div>
+              </div>
+
+              <div class="form-group-field">
+                <label>Child Photo - Boy/Girl (बच्चे की फोटो)</label>
+                <div class="upload-drop-zone">
+                  <i class="fa-solid fa-child"></i>
+                  <p>Click or Drag Child Photo here</p>
+                  <input type="file" id="child_photo" accept="image/*" onchange="previewUploadedFile(this, 'preview_child')">
+                </div>
+                <div id="preview_child" class="file-preview-box"></div>
+              </div>
+
+              <div class="form-group-field">
+                <label>Aadhaar Card Copy (आधार कार्ड फ़ाइल)</label>
+                <div class="upload-drop-zone">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <p>Upload Aadhaar PDF / Image</p>
+                  <input type="file" id="aadhaar_doc" accept="image/*,.pdf" onchange="previewUploadedFile(this, 'preview_aadhaar')">
+                </div>
+                <div id="preview_aadhaar" class="file-preview-box"></div>
+              </div>
+
+              <div class="form-group-field">
+                <label>PAN Card Copy (पैन कार्ड फ़ाइल)</label>
+                <div class="upload-drop-zone">
+                  <i class="fa-solid fa-file-contract"></i>
+                  <p>Upload PAN PDF / Image</p>
+                  <input type="file" id="pan_doc" accept="image/*,.pdf" onchange="previewUploadedFile(this, 'preview_pan')">
+                </div>
+                <div id="preview_pan" class="file-preview-box"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Footer Action Navigation -->
+          <div class="wizard-footer-actions">
+            <button type="button" class="btn-wizard-prev" id="btnWizardPrev" style="visibility: hidden;">
+              <i class="fa-solid fa-arrow-left"></i> Previous
+            </button>
+            <button type="button" class="btn-wizard-next" id="btnWizardNext">
+              Next Step <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Gateway & Sponsoring Banner -->
+  <section id="payment-portal" class="section-padding">
+    <div class="container">
+      <div class="payment-section-box">
+        <div class="payment-banner-grid">
+          <div class="payment-banner-left">
+            <h2>Support Medical Bills & Care Instantly</h2>
+            <p>100% of your contributions go directly toward verified hospital bills and pediatric surgery invoices under our zero advance model.</p>
+
+            <div class="payment-methods-grid">
+              <button class="pay-provider-btn phonepe" onclick="openPaymentModal('PhonePe', 5000)">
+                <i class="fa-solid fa-mobile-screen"></i> PhonePe
+              </button>
+              <button class="pay-provider-btn gpay" onclick="openPaymentModal('Google Pay', 5000)">
+                <i class="fa-brands fa-google-pay"></i> Google Pay
+              </button>
+              <button class="pay-provider-btn paytm" onclick="openPaymentModal('Paytm', 5000)">
+                <i class="fa-solid fa-wallet"></i> Paytm UPI
+              </button>
+              <button class="pay-provider-btn card" onclick="openPaymentModal('Credit/Debit Card', 5000)">
+                <i class="fa-solid fa-credit-card"></i> Card / NetBanking
+              </button>
+            </div>
+          </div>
+
+          <div class="payment-banner-right">
+            <div class="security-trust-box">
+              <h4><i class="fa-solid fa-lock"></i> Bank-Grade Financial Security</h4>
+              <ul class="trust-check-list">
+                <li><i class="fa-solid fa-check"></i> 256-Bit SSL Encrypted Payment Gateways</li>
+                <li><i class="fa-solid fa-check"></i> Razorpay & UPI Direct Settlement Verification</li>
+                <li><i class="fa-solid fa-check"></i> Instant Automated PDF Receipt & Email Dispatch</li>
+                <li><i class="fa-solid fa-check"></i> Real-time SMS & WhatsApp Payment Confirmation</li>
+                <li><i class="fa-solid fa-check"></i> 1-Hour Fast Settlement Guarantee Upon Handover</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+
+  <!-- 1. Medical Invoice Modal -->
+  <div class="modal-overlay" id="invoiceModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('invoiceModal')"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header-pad">
+        <h3 id="invModalTitle">Medical Invoice Breakdown</h3>
+        <p id="invModalSubtitle" style="color: var(--text-muted); font-size: 0.88rem;"></p>
+      </div>
+      <div class="modal-body-pad">
+        <div id="invModalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Doctor Appointment Booking Modal -->
+  <div class="modal-overlay" id="doctorModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('doctorModal')"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header-pad">
+        <h3 id="docModalName">Book Medical Consultation</h3>
+        <p id="docModalHospital" style="color: var(--primary); font-weight: 600; font-size: 0.88rem;"></p>
+      </div>
+      <div class="modal-body-pad">
+        <form id="docBookingForm" onsubmit="handleDoctorBooking(event)">
+          <div class="form-group-field">
+            <label>Patient / Applicant Name <span>*</span></label>
+            <input type="text" class="form-control-input" required placeholder="Enter full name">
+          </div>
+          <div class="form-group-field">
+            <label>Contact Phone <span>*</span></label>
+            <input type="tel" class="form-control-input" required placeholder="10-digit mobile number">
+          </div>
+          <div class="form-group-field">
+            <label>Preferred Date & Slot <span>*</span></label>
+            <input type="datetime-local" class="form-control-input" required>
+          </div>
+          <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center;">Confirm Consultation Booking</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Payment Processing Simulator Modal -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('paymentModal')"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-header-pad">
+        <h3>Complete Care Contribution</h3>
+        <p>Secured via Razorpay & SSL Encrypted Gateway</p>
+      </div>
+      <div class="modal-body-pad">
+        <form id="paymentForm" onsubmit="processSimulatedPayment(event)">
+          <div class="form-group-field">
+            <label>Donor / Sponsor Name <span>*</span></label>
+            <input type="text" id="payDonorName" class="form-control-input" value="Care Supporter" required>
+          </div>
+          <div class="form-group-field">
+            <label>Email ID (For PDF Receipt) <span>*</span></label>
+            <input type="email" id="payDonorEmail" class="form-control-input" value="donor@nanhikali-india.org" required>
+          </div>
+          <div class="form-group-field">
+            <label>Contribution Amount (₹) <span>*</span></label>
+            <input type="number" id="payAmount" class="form-control-input" value="4500" min="100" required>
+          </div>
+          <div class="form-group-field">
+            <label>Selected Payment Gateway</label>
+            <input type="text" id="payGatewayMethod" class="form-control-input" value="UPI / PhonePe" readonly>
+          </div>
+
+          <button type="submit" id="btnSubmitPayment" class="btn-hero-primary" style="width: 100%; justify-content: center; background: var(--pink);">
+            <i class="fa-solid fa-lock"></i> Pay Now & Generate Receipt
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Official Printable Receipt Modal -->
+  <div class="modal-overlay" id="receiptModal">
+    <div class="modal-card" style="max-width: 700px;">
+      <button class="modal-close-btn" onclick="closeModal('receiptModal')"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body-pad">
+        <div class="official-receipt-box">
+          <div class="receipt-watermark">
+            <h2>NANHIKALI CARE & ADOPTION SUPPORT INDIA</h2>
+            <p>OFFICIAL DONATION & MEDICAL AID RECEIPT</p>
+          </div>
+
+          <div class="receipt-grid-info">
+            <div><strong>Receipt No:</strong> <span id="recNo">NK-REC-98421</span></div>
+            <div><strong>Date:</strong> <span id="recDate">2026-07-20</span></div>
+            <div><strong>Donor Name:</strong> <span id="recDonorName">Donor</span></div>
+            <div><strong>Email:</strong> <span id="recDonorEmail">donor@email.com</span></div>
+            <div><strong>Payment Method:</strong> <span id="recMethod">UPI</span></div>
+            <div><strong>Payment Status:</strong> <span style="color: var(--success); font-weight: 800;">SUCCESSFUL</span></div>
+          </div>
+
+          <div style="text-align: center; margin: 20px 0; background: #e0f2fe; padding: 15px; border-radius: 8px;">
+            <div style="font-size: 0.85rem; color: var(--navy); font-weight: 700;">TOTAL AMOUNT PAID</div>
+            <div id="recAmount" style="font-size: 2.2rem; font-weight: 800; color: var(--navy);">₹4,500.00</div>
+          </div>
+
+          <div style="font-size: 0.82rem; color: var(--text-muted); text-align: center; margin-bottom: 20px;">
+            🔒 Verified transaction under 80G tax benefit eligibility. Automated copy dispatched via Email & WhatsApp.
+          </div>
+
+          <div style="display: flex; gap: 15px;">
+            <button onclick="window.print()" class="btn-hero-primary" style="flex: 1; justify-content: center; background: var(--navy);">
+              <i class="fa-solid fa-print"></i> Print / Save PDF Receipt
+            </button>
+            <button onclick="closeModal('receiptModal')" class="btn-hero-secondary" style="flex: 1; justify-content: center; color: var(--navy); border-color: var(--border-color);">
+              Close Window
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastBox">
+    <i class="fa-solid fa-circle-check"></i>
+    <div id="toastMessage">Action completed successfully!</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 15px;">
+            <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="brand-text">
+              <h1 style="color: white;">NANHIKALI</h1>
+              <span>Care & Adoption Support India</span>
+            </div>
+          </div>
+          <p>Dedicated high-scalability web platform for pediatric healthcare aid, child welfare adoption registries, and super-specialty hospital connectivity across North East & Eastern India.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Regional Hubs</h4>
+          <ul>
+            <li><a href="#hubs">Apollo Hospital, Guwahati</a></li>
+            <li><a href="#hubs">Apollo Gleneagles, Kolkata</a></li>
+            <li><a href="#hubs">FAAMCH, Barpeta</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul>
+            <li><a href="#children">Child Profiles Registry</a></li>
+            <li><a href="#doctors">Doctor Directory</a></li>
+            <li><a href="#application-form">Application Form</a></li>
+            <li><a href="#payment-portal">Sponsor Medical Bill</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Emergency Helplines</h4>
+          <p style="color: white; font-weight: 700; margin-bottom: 5px;">+91 9217027691</p>
+          <p style="color: white; font-weight: 700; margin-bottom: 12px;">+91 8638327760</p>
+          <p><i class="fa-solid fa-envelope"></i> support@nanhikali-india.org</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nanhi Kali Care & Support India. All Rights Reserved. Full SSL Compliant & Zero Advance Model.</p>
+        <p>1-Hour Fast Settlement Handover Pledge</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

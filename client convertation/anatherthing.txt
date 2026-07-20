@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nanhikali - Application & Document Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff5f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-top: 6px solid #d81b60;
+    }
+    .form-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .form-header h2 {
+      color: #d81b60;
+      margin-bottom: 5px;
+    }
+    .form-header p {
+      color: #666;
+      font-size: 14px;
+    }
+    .section-title {
+      background-color: #f8bbd0;
+      color: #880e4f;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .form-row .form-group {
+      flex: 1;
+      min-width: 240px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+    .submit-btn {
+      background-color: #d81b60;
+      color: #ffffff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-header">
+    <h2>Nanhikali Care & Adoption Support India</h2>
+    <p>Please fill in all the required applicant details & documents</p>
+  </div>
+
+  <form action="#" method="POST" enctype="multipart/form-data">
+    
+    <!-- SECTION 1: Personal Details -->
+    <div class="section-title">1. Personal Information (व्यक्तिगत विवरण)</div>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label>Applicant Full Name (आवेदक का नाम):</label>
+        <input type="text" name="full_name" placeholder="Enter Full Name" required>
+      </div>
+      <div class="form-group">
+        <label>Age (आयु):</label>
+        <input type="number" name="age" placeholder="Age in years" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Father's Name (पिता का नाम):</label>
+        <input type="text" name="father_name" required>
+      </div>
+      <div class="form-group">
+        <label>Mother's Name (माता का नाम):</label>
+        <input type="text" name="mother_name" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Spouse / Husband / Wife Name (पति/पत्नी का नाम):</label>
+        <input type="text" name="spouse_name">
+      </div>
+      <div class="form-group">
+        <label>Other Relative/Guardian Name (अन्य रिश्तेदार):</label>
+        <input type="text" name="other_name">
+      </div>
+    </div>
+
+    <!-- SECTION 2: Contact & Address -->
+    <div class="section-title">2. Contact & Address (संपर्क और पता)</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Mobile Number (मोबाइल नंबर):</label>
+        <input type="tel" name="mobile_number" placeholder="10-digit mobile number" required>
+      </div>
+      <div class="form-group">
+        <label>Email ID (ईमेल आई डी):</label>
+        <input type="email" name="email_id" placeholder="example@mail.com">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Full Address (पूरा पता):</label>
+      <textarea name="full_address" placeholder="Enter complete home address" required></textarea>
+    </div>
+
+    <!-- SECTION 3: Identity Documents -->
+    <div class="section-title">3. Identity Details (पहचान पत्र)</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Aadhaar Card Number (आधार नंबर):</label>
+        <input type="text" name="aadhaar_number" placeholder="12 Digit Aadhaar Number">
+      </div>
+      <div class="form-group">
+        <label>PAN Card Number (पैन कार्ड नंबर):</label>
+        <input type="text" name="pan_number" placeholder="10 Digit PAN Number">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Voter ID Number (वोटर आईडी):</label>
+        <input type="text" name="voter_id" placeholder="Voter ID Number">
+      </div>
+      <div class="form-group">
+        <label>Driving Licence Number (ड्राइविंग लाइसेंस):</label>
+        <input type="text" name="dl_number" placeholder="Driving Licence Number">
+      </div>
+    </div>
+
+    <!-- SECTION 4: Upload Photos & Documents -->
+    <div class="section-title">4. Document & Photo Uploads (फोटो और दस्तावेज अपलोड)</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Husband & Wife Joint Photo (पति-पत्नी की संयुक्त फोटो):</label>
+        <input type="file" name="joint_photo" accept="image/*">
+      </div>
+      <div class="form-group">
+        <label>Child Photo - Boy/Girl (बच्चे की फोटो):</label>
+        <input type="file" name="child_photo" accept="image/*">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Aadhaar Card Copy (आधार कार्ड फ़ाइल):</label>
+        <input type="file" name="aadhaar_doc" accept="image/*,.pdf">
+      </div>
+      <div class="form-group">
+        <label>PAN Card Copy (पैन कार्ड फ़ाइल):</label>
+        <input type="file" name="pan_doc" accept="image/*,.pdf">
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Details (जमा करें)</button>
+  </form>
+</div>
+
+</body>
+</html>

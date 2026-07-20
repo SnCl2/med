@@ -1,0 +1,7 @@
+const client = require('twilio')(ACCOUNT_SID, AUTH_TOKEN);
+
+client.messages.create({
+    from: 'whatsapp:+14155238886',
+    to: 'whatsapp:+91XXXXXXXXXX',
+    body: 'Thank you! Your donation is successful. Receipt sent to your email.'
+});

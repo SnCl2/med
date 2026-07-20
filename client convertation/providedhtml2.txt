@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanhi Kali - Care & Support India</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f9fc;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1607746882042-944635dfe10e');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #00b4d8;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* CONTACT BAR */
+.contact-bar {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #023e8a;
+    margin-bottom: 15px;
+}
+
+/* FORM */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button.primary {
+    background: #0077b6;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* PATIENT CARD */
+.patient-card {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.patient-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.patient-info {
+    padding: 15px;
+}
+
+.badge {
+    background: #caf0f8;
+    color: #0077b6;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* PAYMENT */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.pay-btn {
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Nanhi Kali</h1>
+    <p>Helping Every Child Get Medical Care & Support</p>
+    <button>Donate Now</button>
+</section>
+
+<div class="contact-bar">
+📞 9217027691 | 8638327760 | ✉ support@nanhikali-india.org
+</div>
+
+<div class="container">
+
+<div class="grid">
+
+<!-- LOCATION -->
+<div class="card">
+<h2>Medical Centers</h2>
+<p><b>Apollo Hospital, Guwahati</b><br>GS Road, Assam</p><br>
+<p><b>Apollo Hospital, Kolkata</b><br>Canal Circular Road</p><br>
+<p><b>FAAMCH, Barpeta</b><br>Jania Road, Assam</p>
+</div>
+
+<!-- FORM -->
+<div class="card">
+<h2>Book Medical Help</h2>
+<input type="text" placeholder="Full Name">
+<select>
+<option>Select Child Category</option>
+<option>Boy</option>
+<option>Girl</option>
+</select>
+<select>
+<option>Select Hospital</option>
+<option>Guwahati</option>
+<option>Kolkata</option>
+<option>Barpeta</option>
+</select>
+<button class="primary">Submit Request</button>
+</div>
+
+</div>
+
+<h2 style="margin:30px 0;">Active Patient Case</h2>
+
+<div class="grid">
+
+<!-- PATIENT -->
+<div class="card patient-card">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+<div class="patient-info">
+<span class="badge">Medical Support</span>
+<h3>Case #104</h3>
+<p>Age: 3 Years</p>
+<p>Hospital: Apollo Guwahati</p>
+<p><b>₹45,000 Needed</b></p>
+</div>
+</div>
+
+<!-- PAYMENT -->
+<div class="card">
+<h2>Make Payment</h2>
+<div class="payment-grid">
+<button class="pay-btn" style="background:#5f259f;">PhonePe</button>
+<button class="pay-btn" style="background:#4285f4;">Google Pay</button>
+<button class="pay-btn" style="background:#002e6e;">Paytm</button>
+<button class="pay-btn" style="background:#222;">Card</button>
+</div>
+<p style="margin-top:15px; font-size:0.8rem;">🔒 Secure SSL Payments</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Nanhi Kali Care India</p>
+</footer>
+
+</body>
+</html>
