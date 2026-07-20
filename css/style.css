@@ -1579,6 +1579,54 @@ textarea.form-control-input {
   }
 }
 
+/* Desktop Utility Classes */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-menu-cta {
+  display: none;
+}
+
+/* Mobile Hero Banner Component (Hidden on Desktop) */
+.hero-mobile-banner {
+  display: none;
+}
+
+.mobile-banner-img-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  height: 210px;
+  margin: 20px 0 25px 0;
+}
+
+.mobile-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 16px;
+  background: linear-gradient(0deg, rgba(7, 34, 61, 0.95) 0%, rgba(7, 34, 61, 0.6) 60%, transparent 100%);
+}
+
+.mobile-banner-tag {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* Mobile Toggle Button */
 .mobile-toggle-btn {
   display: none;
@@ -1629,6 +1677,31 @@ textarea.form-control-input {
 }
 
 @media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-menu-cta {
+    display: block;
+  }
+
+  .hero-mobile-banner {
+    display: block;
+  }
+
+  .hero-right-card {
+    display: none;
+  }
+
+  .top-helpline-bar {
+    padding: 6px 0;
+    font-size: 0.8rem;
+  }
+
+  .helpline-item {
+    font-size: 0.82rem;
+  }
+
   .mobile-toggle-btn {
     display: flex;
   }
@@ -1653,22 +1726,41 @@ textarea.form-control-input {
     animation: fadeIn 0.3s ease;
   }
 
-  .btn-header-cta {
-    padding: 8px 14px;
-    font-size: 0.82rem;
-  }
-
   .top-bar-content {
     justify-content: center;
     text-align: center;
   }
 
   .hero-title {
-    font-size: 2.1rem;
+    font-size: 1.95rem;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 25px;
   }
 
   .hero-section {
-    padding: 50px 0 70px;
+    padding: 45px 0 60px;
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .btn-hero-primary, .btn-hero-secondary {
+    padding: 12px 20px;
+    font-size: 0.92rem;
+  }
+
+  .hero-trust-row {
+    gap: 12px;
+    font-size: 0.78rem;
+    flex-wrap: wrap;
   }
 
   .form-grid-2 {
@@ -1709,15 +1801,19 @@ textarea.form-control-input {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 
   .brand-text h1 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .brand-text span {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
+  }
+
+  .helpline-label {
+    display: none;
   }
 
   .stats-grid {
@@ -1737,4 +1833,5 @@ textarea.form-control-input {
     justify-content: center;
   }
 }
+
 
