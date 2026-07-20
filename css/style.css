@@ -1579,54 +1579,6 @@ textarea.form-control-input {
   }
 }
 
-/* Desktop Utility Classes */
-.desktop-only {
-  display: flex;
-}
-
-.mobile-menu-cta {
-  display: none;
-}
-
-/* Mobile Hero Banner Component (Hidden on Desktop) */
-.hero-mobile-banner {
-  display: none;
-}
-
-.mobile-banner-img-wrap {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  height: 210px;
-  margin: 20px 0 25px 0;
-}
-
-.mobile-banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mobile-banner-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 14px 16px;
-  background: linear-gradient(0deg, rgba(7, 34, 61, 0.95) 0%, rgba(7, 34, 61, 0.6) 60%, transparent 100%);
-}
-
-.mobile-banner-tag {
-  color: #38bdf8;
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 /* Mobile Toggle Button */
 .mobile-toggle-btn {
   display: none;
@@ -1643,6 +1595,11 @@ textarea.form-control-input {
 
 .mobile-toggle-btn:hover {
   background: #e2e8f0;
+}
+
+/* Mobile Drawer CTA */
+.mobile-cta-item {
+  display: none;
 }
 
 /* Responsive Breakpoints */
@@ -1677,39 +1634,67 @@ textarea.form-control-input {
 }
 
 @media (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
-
-  .mobile-menu-cta {
-    display: block;
-  }
-
-  .hero-mobile-banner {
-    display: block;
-  }
-
-  .hero-right-card {
-    display: none;
-  }
-
+  /* De-clutter Top Helpline Bar on Mobile */
   .top-helpline-bar {
     padding: 6px 0;
     font-size: 0.8rem;
   }
 
-  .helpline-item {
-    font-size: 0.82rem;
+  .helpline-links {
+    display: none; /* Hide redundant email & settlement badge on mobile top bar */
+  }
+
+  .top-bar-content {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* De-clutter Navigation Header on Mobile */
+  .navbar {
+    height: 60px;
+  }
+
+  .nav-container {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .brand-text span {
+    display: none; /* Hide subtitle text on mobile header so logo never wraps or overlaps */
+  }
+
+  .brand-text h1 {
+    font-size: 1.25rem;
+    letter-spacing: -0.3px;
+  }
+
+  .navbar > .btn-header-cta {
+    display: none; /* Hide header CTA button on sticky mobile navbar (it lives inside menu & hero) */
+  }
+
+  .mobile-cta-item {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .mobile-drawer-cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
   }
 
   .mobile-toggle-btn {
     display: flex;
+    width: 40px;
+    height: 40px;
   }
-  
+
   .nav-menu {
     display: none;
     position: absolute;
-    top: 75px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: #ffffff;
@@ -1720,60 +1705,155 @@ textarea.form-control-input {
     gap: 16px;
     z-index: 999;
   }
-  
-  .nav-menu.active {
-    display: flex;
-    animation: fadeIn 0.3s ease;
+
+  /* Mobile Hero Banner Section */
+  .hero-section {
+    padding: 35px 16px 45px;
+    background: linear-gradient(180deg, rgba(7, 34, 61, 0.88) 0%, rgba(13, 59, 102, 0.96) 100%),
+                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
-  .top-bar-content {
-    justify-content: center;
-    text-align: center;
+  .hero-grid {
+    gap: 24px;
+  }
+
+  .hero-tag {
+    padding: 4px 12px;
+    font-size: 0.76rem;
+    margin-bottom: 12px;
+    display: inline-flex;
   }
 
   .hero-title {
-    font-size: 1.95rem;
+    font-size: 1.7rem;
     line-height: 1.25;
+    margin-bottom: 14px;
     letter-spacing: -0.5px;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #cbd5e1;
-    margin-bottom: 25px;
-  }
-
-  .hero-section {
-    padding: 45px 0 60px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
   }
 
   .hero-actions {
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
   }
 
   .btn-hero-primary, .btn-hero-secondary {
+    width: 100%;
+    justify-content: center;
     padding: 12px 20px;
     font-size: 0.92rem;
   }
 
   .hero-trust-row {
-    gap: 12px;
     font-size: 0.78rem;
+    gap: 10px;
     flex-wrap: wrap;
+    padding-top: 15px;
+  }
+
+  .hero-card-preview {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .preview-child-img {
+    height: 170px;
+  }
+
+  /* De-clutter Stats Bar */
+  .impact-stats-bar {
+    margin-top: -25px;
+    padding: 18px 12px;
+    border-radius: 16px;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+
+  .section-padding {
+    padding: 45px 0;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
+  .section-desc {
+    font-size: 0.88rem;
+  }
+
+  /* Horizontal Filter Pills Touch Slider */
+  .filter-controls-wrap {
+    padding: 14px;
+    margin-bottom: 25px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filter-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    width: 100%;
+    gap: 8px;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .filter-pills::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+  }
+
+  .search-input-box {
+    width: 100%;
+    min-width: 100%;
   }
 
   .form-grid-2 {
     grid-template-columns: 1fr;
   }
+
   .form-group-field.full-width {
     grid-column: span 1;
   }
+
   .wizard-steps-container {
-    padding: 15px 10px;
+    padding: 15px 8px;
   }
+
+  .step-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
   .step-label {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
   }
   
   .footer-grid {
@@ -1792,28 +1872,15 @@ textarea.form-control-input {
   .receipt-grid-info {
     grid-template-columns: 1fr;
   }
-
-  .filter-controls-wrap {
-    flex-direction: column;
-    align-items: stretch;
-  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
   }
 
-  .brand-text h1 {
-    font-size: 1.05rem;
-  }
-
-  .brand-text span {
-    font-size: 0.62rem;
-  }
-
-  .helpline-label {
-    display: none;
+  .top-helpline-bar {
+    font-size: 0.74rem;
   }
 
   .stats-grid {
@@ -1826,11 +1893,6 @@ textarea.form-control-input {
 
   .hubs-grid, .children-grid, .doctors-grid {
     grid-template-columns: 1fr;
-  }
-
-  .btn-hero-primary, .btn-hero-secondary {
-    width: 100%;
-    justify-content: center;
   }
 }
 
