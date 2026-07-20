@@ -5,12 +5,39 @@ let currentStep = 1;
 const totalSteps = 4;
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileMenu();
   renderRegionalHubs();
   renderChildProfiles();
   renderDoctorProfiles();
   initFilterControls();
   initFormWizard();
 });
+
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileToggleBtn');
+  const menu = document.getElementById('navMenu');
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      const icon = toggleBtn.querySelector('i');
+      if (icon) {
+        if (menu.classList.contains('active')) {
+          icon.className = 'fa-solid fa-xmark';
+        } else {
+          icon.className = 'fa-solid fa-bars';
+        }
+      }
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        const icon = toggleBtn.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      });
+    });
+  }
+}
 
 /* ==========================================================================
    1. Render Regional Hubs
