@@ -247,7 +247,25 @@ button {
   box-shadow: 0 6px 20px rgba(216, 27, 96, 0.45);
 }
 
+/* ==========================================================================
+   Top Hero Image Banner
+   ========================================================================== */
+.top-hero-banner {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff; /* Matches the white background of the banner image */
+}
 
+.banner-container {
+  width: 100%;
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* ==========================================================================
    Hero Section
