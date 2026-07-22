@@ -247,25 +247,7 @@ button {
   box-shadow: 0 6px 20px rgba(216, 27, 96, 0.45);
 }
 
-/* ==========================================================================
-   Top Hero Image Banner
-   ========================================================================== */
-.top-hero-banner {
-  width: 100%;
-  overflow: hidden;
-  background-color: #ffffff; /* Matches the white background of the banner image */
-}
 
-.banner-container {
-  width: 100%;
-  position: relative;
-}
-
-.banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* ==========================================================================
    Hero Section
@@ -399,6 +381,37 @@ button {
 
 .trust-item i {
   color: #38bdf8;
+}
+
+/* Hero Right Floating Image */
+.hero-right-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.hero-floating-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  animation: floatHeroImage 6s ease-in-out infinite;
+}
+
+@keyframes floatHeroImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Hero Right Card */
