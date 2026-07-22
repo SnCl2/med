@@ -252,7 +252,8 @@ button {
    ========================================================================== */
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #07223d 0%, #0d3b66 60%, #0077b6 100%);
+  background: linear-gradient(135deg, rgba(7, 34, 61, 0.92) 0%, rgba(13, 59, 102, 0.88) 60%, rgba(0, 119, 182, 0.8) 100%),
+              url('../assets/hero_banner.jpeg') center/cover no-repeat;
   color: white;
   padding: 90px 0 100px;
   overflow: hidden;
@@ -1715,11 +1716,10 @@ textarea.form-control-input {
     z-index: 999;
   }
 
-  /* Mobile Hero Banner Section */
   .hero-section {
     padding: 35px 16px 45px;
     background: linear-gradient(180deg, rgba(7, 34, 61, 0.88) 0%, rgba(13, 59, 102, 0.96) 100%),
-                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+                url('../assets/hero_banner.jpeg') center/cover no-repeat;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
