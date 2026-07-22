@@ -1677,7 +1677,7 @@ textarea.form-control-input {
     letter-spacing: -0.3px;
   }
 
-  .navbar > .btn-header-cta {
+  .nav-container > .btn-header-cta {
     display: none; /* Hide header CTA button on sticky mobile navbar (it lives inside menu & hero) */
   }
 
@@ -1881,6 +1881,35 @@ textarea.form-control-input {
   .receipt-grid-info {
     grid-template-columns: 1fr;
   }
+
+  /* Floating Sticky Mobile Button (Visible under 768px) */
+  .floating-sticky-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+    background: linear-gradient(135deg, var(--pink), #e91e63);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 20px rgba(216, 27, 96, 0.45);
+    border: 2px solid white;
+    transition: var(--transition);
+  }
+
+  .floating-sticky-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 25px rgba(216, 27, 96, 0.55);
+  }
+
+  .floating-sticky-btn:active {
+    transform: translateY(0) scale(0.98);
+  }
 }
 
 @media (max-width: 480px) {
@@ -1903,6 +1932,11 @@ textarea.form-control-input {
   .hubs-grid, .children-grid, .doctors-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Floating Sticky Button - Default Hidden on Desktop */
+.floating-sticky-btn {
+  display: none;
 }
 
 
