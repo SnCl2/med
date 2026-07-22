@@ -1766,6 +1766,10 @@ textarea.form-control-input {
     z-index: 999;
   }
 
+  .nav-menu.active {
+    display: flex;
+  }
+
   /* Mobile Hero Banner Section */
   .hero-section {
     padding: 35px 16px 45px;
