@@ -173,16 +173,25 @@ button {
 }
 
 .logo-icon {
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, var(--pink), var(--primary));
-  border-radius: 12px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
+}
+
+.logo-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.25);
+  border: 2px solid white;
 }
 
 .brand-text h1 {

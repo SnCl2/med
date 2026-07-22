@@ -4,3 +4,6 @@ Thumbs.db
 
 # Log files
 *.log
+
+# Exclude baby folder and its contents
+baby/
