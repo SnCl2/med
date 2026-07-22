@@ -53,29 +53,7 @@ const regionalHubs = [
 ];
 
 const childProfiles = [
-  {
-    id: "NK-101",
-    name: "Aarav Sharma",
-    gender: "boy",
-    age: "2.5 Years",
-    category: "Medical Bill Support",
-    location: "guwahati",
-    hospital: "Apollo Hospital, Guwahati",
-    condition: "Pediatric Ventricular Septal Defect (Heart Surgery)",
-    estimatedCost: 85000,
-    raisedAmount: 52000,
-    image: "assets/child/child_1.jpeg",
-    status: "Urgent Care Required",
-    invoiceNo: "INV-GWT-2026-101",
-    admissionDate: "2026-06-12",
-    doctorInCharge: "Dr. Anirban Dutta (Pediatric Cardiologist)",
-    invoiceItems: [
-      { description: "Pediatric Cardiac ICU Charges (7 days)", cost: 35000 },
-      { description: "Surgical Consumables & Anesthesia", cost: 25000 },
-      { description: "Post-Op Echocardiogram & Meds", cost: 15000 },
-      { description: "Specialized Pediatric Nursing", cost: 10000 }
-    ]
-  },
+
   {
     id: "NK-102",
     name: "Ananya Roy",
@@ -186,49 +164,7 @@ const childProfiles = [
       { description: "Pediatric Care Monitoring", cost: 10000 }
     ]
   },
-  {
-    id: "NK-107",
-    name: "Ayaan Boro",
-    gender: "boy",
-    age: "1.8 Years",
-    category: "Medical Bill Support",
-    location: "guwahati",
-    hospital: "Apollo Hospital, Guwahati",
-    condition: "Cleft Lip & Palate Correction",
-    estimatedCost: 55000,
-    raisedAmount: 48000,
-    image: "assets/child/child_7.jpeg",
-    status: "Post-Surgery Care",
-    invoiceNo: "INV-GWT-2026-107",
-    admissionDate: "2026-05-18",
-    doctorInCharge: "Dr. Maya Swargiary (Maxillofacial)",
-    invoiceItems: [
-      { description: "Primary Palatoplasty Surgery", cost: 30000 },
-      { description: "Speech Therapy Pre-Assessment", cost: 12000 },
-      { description: "Medication & Hospital Stay", cost: 13000 }
-    ]
-  },
-  {
-    id: "NK-108",
-    name: "Saanvi Bhattacharya",
-    gender: "girl",
-    age: "2 Years",
-    category: "Adoption & Care",
-    location: "kolkata",
-    hospital: "Apollo Gleneagles, Kolkata",
-    condition: "Routine Child Care & Pre-Adoption Clearance",
-    estimatedCost: 30000,
-    raisedAmount: 30000,
-    image: "assets/child/child_8.jpeg",
-    status: "Fully Funded / Pre-Adopted",
-    invoiceNo: "INV-KOL-2026-108",
-    admissionDate: "2026-04-10",
-    doctorInCharge: "Dr. Sourav Banerjee (Neonatologist)",
-    invoiceItems: [
-      { description: "Comprehensive Health Check & DNA Verification", cost: 18000 },
-      { description: "Pediatric Assessment Certificate", cost: 12000 }
-    ]
-  },
+
   {
     id: "NK-109",
     name: "Ishaan Kalita",
