@@ -224,7 +224,7 @@ function renderDoctorProfiles() {
       </div>
 
       <button class="btn-book-doc" onclick="openDoctorModal('${doc.name}', '${doc.hospital}')">
-        <i class="fa-solid fa-calendar-check"></i> Book Consultation
+        <i class="fa-solid fa-calendar-check"></i> Appointment Booking
       </button>
     </div>
   `).join('');
@@ -348,7 +348,7 @@ function openInvoiceModal(childId) {
 function openDoctorModal(docName, docHospital) {
   document.getElementById('docHiddenName').value = docName;
   document.getElementById('docHiddenHospital').value = docHospital;
-  document.getElementById('docModalName').textContent = `Book Consultation with ${docName}`;
+  document.getElementById('docModalName').textContent = `Appointment Booking with ${docName}`;
   document.getElementById('docModalHospital').textContent = docHospital;
   
   // Reset form fields
