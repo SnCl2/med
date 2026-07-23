@@ -1,6 +1,7 @@
 // Nanhikali Care & Adoption Support India - Application Logic
 
 let activeChildFilter = 'all';
+let activeDoctorFilter = 'all';
 let currentStep = 1;
 const totalSteps = 4;
 
@@ -131,8 +132,8 @@ function renderChildProfiles() {
             <button class="btn-invoice" onclick="openInvoiceModal('${child.id}')">
               <i class="fa-solid fa-file-invoice"></i> Medical Invoice
             </button>
-            <button class="btn-sponsor" onclick="openPaymentModal('${child.name} (${child.id})', ${child.estimatedCost - child.raisedAmount})">
-              <i class="fa-solid fa-heart"></i> Sponsor Aid
+            <button class="btn-sponsor" onclick="openAdoptionModal('${child.id}', '${child.name.replace(/'/g, "\\'")}')">
+              <i class="fa-solid fa-child-reaching"></i> Adoption Booking
             </button>
           </div>
         </div>
@@ -156,6 +157,22 @@ function initFilterControls() {
       renderChildProfiles();
     });
   });
+
+  // Doctor Filter & Search Setup
+  const docSearchInput = document.getElementById('doctorSearchInput');
+  if (docSearchInput) {
+    docSearchInput.addEventListener('input', renderDoctorProfiles);
+  }
+
+  const docFilterBtns = document.querySelectorAll('#doctorFilterGroup .filter-btn');
+  docFilterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      docFilterBtns.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      activeDoctorFilter = e.target.getAttribute('data-filter');
+      renderDoctorProfiles();
+    });
+  });
 }
 
 /* ==========================================================================
@@ -165,7 +182,28 @@ function renderDoctorProfiles() {
   const container = document.getElementById('doctorsGrid');
   if (!container || typeof certifiedDoctors === 'undefined') return;
 
-  container.innerHTML = certifiedDoctors.map(doc => `
+  const searchQuery = document.getElementById('doctorSearchInput')?.value.toLowerCase() || '';
+
+  const filtered = certifiedDoctors.filter(doc => {
+    const matchesFilter = (activeDoctorFilter === 'all') || (activeDoctorFilter === doc.location);
+    const matchesSearch = doc.name.toLowerCase().includes(searchQuery) ||
+                          doc.specialty.toLowerCase().includes(searchQuery) ||
+                          doc.hospital.toLowerCase().includes(searchQuery) ||
+                          doc.degree.toLowerCase().includes(searchQuery);
+    return matchesFilter && matchesSearch;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px; background: white; border-radius: 12px; color: var(--text-muted);">
+        <i class="fa-solid fa-user-doctor" style="font-size: 2.5rem; margin-bottom: 10px;"></i>
+        <p>No doctors matching your search query or filter.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(doc => `
     <div class="doctor-card">
       <div class="doctor-avatar-wrap">
         <img src="${doc.image}" alt="${doc.name}">
@@ -181,7 +219,7 @@ function renderDoctorProfiles() {
           <strong>${doc.experience}</strong> Exp
         </div>
         <div class="doc-meta-item">
-          <strong><i class="fa-solid fa-star" style="color:#f59e0b;"></i> ${doc.rating}</strong> (${doc.reviews})
+          <strong><i class="fa-solid fa-star" style="color:#f59e0b;"></i> ${doc.rating.toFixed(1)}</strong> (${doc.reviews})
         </div>
       </div>
 
@@ -209,6 +247,60 @@ function closeModal(modalId) {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
+}
+
+function openAdoptionModal(childId, childName) {
+  document.getElementById('adoptChildId').value = childId;
+  document.getElementById('adoptChildName').value = childName;
+  document.getElementById('adoptModalChildInfo').textContent = `Adopting Child: ${childName} (${childId})`;
+  
+  // Reset form fields
+  document.getElementById('adoptionModalForm').reset();
+
+  // Generate UPI QR code for +91 6290353970
+  const upiPayload = `upi://pay?pa=6290353970@ybl&pn=Nanhikali%20Adoption&am=12221.50&cu=INR`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiPayload)}`;
+  document.getElementById('adoptQrCodeImg').src = qrUrl;
+
+  openModal('adoptionModal');
+}
+
+function handleAdoptionSubmission(e) {
+  e.preventDefault();
+
+  const childId = document.getElementById('adoptChildId').value;
+  const childName = document.getElementById('adoptChildName').value;
+  const applicantName = document.getElementById('adoptApplicantName').value.trim();
+  const email = document.getElementById('adoptApplicantEmail').value.trim();
+  const phone = document.getElementById('adoptApplicantPhone').value.trim();
+  const address = document.getElementById('adoptApplicantAddress').value.trim();
+  const txnId = document.getElementById('adoptTransactionId').value.trim();
+
+  const message = `*Nanhikali Care & Adoption Support India*
+----------------------------------
+*Child Details:* ${childName} (${childId})
+*Applicant Name:* ${applicantName}
+*Email:* ${email}
+*Phone Number:* ${phone}
+*Address:* ${address}
+*Booking Fee Status:* ₹12,221.50 Paid
+*UPI Transaction ID:* ${txnId}
+
+_Note: This is a verified adoption booking request._`;
+
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=916290353970&text=${encodeURIComponent(message)}`;
+
+  // Copy text details to clipboard automatically as a fallback
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(message).catch(err => console.warn('Clipboard write skipped:', err));
+  }
+
+  closeModal('adoptionModal');
+  showToast('Redirecting to WhatsApp to complete your application...');
+
+  setTimeout(() => {
+    window.open(whatsappUrl, '_blank');
+  }, 1200);
 }
 
 function openInvoiceModal(childId) {
