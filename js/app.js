@@ -346,15 +346,68 @@ function openInvoiceModal(childId) {
 }
 
 function openDoctorModal(docName, docHospital) {
+  document.getElementById('docHiddenName').value = docName;
+  document.getElementById('docHiddenHospital').value = docHospital;
   document.getElementById('docModalName').textContent = `Book Consultation with ${docName}`;
   document.getElementById('docModalHospital').textContent = docHospital;
+  
+  // Reset form fields
+  document.getElementById('docBookingForm').reset();
+
+  // Generate UPI QR code for +91 6290353970 with amount ₹2,221.00
+  const upiPayload = `upi://pay?pa=6290353970@ybl&pn=Doctor%20Consultation%20${encodeURIComponent(docName)}&am=2221.00&cu=INR`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiPayload)}`;
+  document.getElementById('docQrCodeImg').src = qrUrl;
+
   openModal('doctorModal');
 }
 
 function handleDoctorBooking(e) {
   e.preventDefault();
+
+  const docName = document.getElementById('docHiddenName').value;
+  const docHospital = document.getElementById('docHiddenHospital').value;
+  
+  const patientName = document.getElementById('docPatientName').value.trim();
+  const email = document.getElementById('docPatientEmail').value.trim();
+  const phone = document.getElementById('docPatientPhone').value.trim();
+  const address = document.getElementById('docPatientAddress').value.trim();
+  const slot = document.getElementById('docPatientSlot').value;
+  const txnId = document.getElementById('docTransactionId').value.trim();
+
+  // Format date nicely
+  const formattedSlot = new Date(slot).toLocaleString('en-IN', {
+    dateStyle: 'medium',
+    timeStyle: 'short'
+  });
+
+  const message = `*Nanhikali Doctor Consultation Booking*
+----------------------------------
+*Doctor Name:* ${docName}
+*Hospital:* ${docHospital}
+*Patient Name:* ${patientName}
+*Email:* ${email}
+*Phone Number:* ${phone}
+*Address:* ${address}
+*Preferred Slot:* ${formattedSlot}
+*Booking Fee Status:* ₹2,221.00 Paid
+*UPI Transaction ID:* ${txnId}
+
+_Note: This is a verified medical consultation booking request._`;
+
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=916290353970&text=${encodeURIComponent(message)}`;
+
+  // Copy text details to clipboard automatically as a fallback
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(message).catch(err => console.warn('Clipboard write skipped:', err));
+  }
+
   closeModal('doctorModal');
-  showToast('Consultation request submitted successfully! Confirmation SMS sent.');
+  showToast('Redirecting to WhatsApp to complete your booking...');
+
+  setTimeout(() => {
+    window.open(whatsappUrl, '_blank');
+  }, 1200);
 }
 
 function openPaymentModal(paymentFor, suggestedAmount) {
