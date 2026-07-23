@@ -7,3 +7,4 @@ Thumbs.db
 
 # Exclude baby folder and its contents
 baby/
+js/new_doctors.json
